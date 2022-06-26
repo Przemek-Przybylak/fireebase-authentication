@@ -90,5 +90,7 @@ export {
   logInWithEmailAndPassword,
   registerWithEmailAndPassword,
   sendPasswordReset,
+  sendPasswordResetEmail,
   logout,
+  signInWithEmailAndPassword,
 };

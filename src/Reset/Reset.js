@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { auth, sendPasswordResetEmail } from "../firebase";
+import { sendPasswordResetEmail } from "../firebase";
+import { selectAuth } from "../firebaseSlice";
 import "./Reset.css";
+import { useSelector } from "react-redux";
 function Reset() {
+  const auth = useSelector(selectAuth);
   const [email, setEmail] = useState("");
   const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();

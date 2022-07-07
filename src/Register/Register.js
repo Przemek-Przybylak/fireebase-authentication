@@ -1,24 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import { registerWithEmailAndPassword, signInWithGoogle } from "../firebase";
-import { selectAuth } from "../firebaseSlice";
+import {
+  auth,
+  registerWithEmailAndPassword,
+  signInWithGoogle,
+} from "../firebase";
 import "./Register.css";
-import { useSelector } from "react-redux";
+
 function Register() {
-  const auth = useSelector(selectAuth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [user, loading, error] = useAuthState(auth);
-  const history = useNavigate();
+  const navigate = useNavigate();
   const register = () => {
     if (!name) alert("Please enter name");
     registerWithEmailAndPassword(name, email, password);
   };
   useEffect(() => {
     if (loading) return;
-    if (user) history.replace("/dashboard");
+    if (user) navigate("/dashboard");
   }, [user, loading]);
   return (
     <div className="register">
@@ -44,9 +46,9 @@ function Register() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
         />
-        <Link to="/dashboard" className="register__btn" onClick={register}>
+        <buttom to="/dashboard" className="register__btn" onClick={register}>
           Register
-        </Link>
+        </buttom>
         <button
           className="register__btn register__google"
           onClick={signInWithGoogle}

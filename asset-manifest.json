@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/fireebase-authentication/static/css/main.e740dd76.css",
-    "main.js": "/fireebase-authentication/static/js/main.907bf5fe.js",
+    "main.js": "/fireebase-authentication/static/js/main.62c79f9d.js",
     "static/js/787.373ebef7.chunk.js": "/fireebase-authentication/static/js/787.373ebef7.chunk.js",
     "index.html": "/fireebase-authentication/index.html",
     "main.e740dd76.css.map": "/fireebase-authentication/static/css/main.e740dd76.css.map",
-    "main.907bf5fe.js.map": "/fireebase-authentication/static/js/main.907bf5fe.js.map",
+    "main.62c79f9d.js.map": "/fireebase-authentication/static/js/main.62c79f9d.js.map",
     "787.373ebef7.chunk.js.map": "/fireebase-authentication/static/js/787.373ebef7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e740dd76.css",
-    "static/js/main.907bf5fe.js"
+    "static/js/main.62c79f9d.js"
   ]
 }
